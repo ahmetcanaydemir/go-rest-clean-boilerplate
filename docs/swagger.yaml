@@ -1,0 +1,60 @@
+basePath: /
+definitions:
+  model.Stats:
+    properties:
+      count:
+        type: number
+      date:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: Go Rest Clean Boilerplate
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: Go Rest Clean Boilerplate
+  version: "1.0"
+paths:
+  /Stats:
+    get:
+      description: This endpoint returns the status of the Go Rest Clean Boilerplate
+      responses:
+        "200":
+          description: Stats
+          schema:
+            $ref: '#/definitions/model.Stats'
+        "404":
+          description: ""
+        "500":
+          description: ""
+      summary: Get Stats
+      tags:
+      - Stats
+  /nginx-health:
+    get:
+      description: This function returns the nginx health
+      responses:
+        "200":
+          description: ""
+        "500":
+          description: ""
+      summary: Get Nginx Health
+      tags:
+      - Status
+  /status:
+    get:
+      description: This endpoint returns the status of the Go Rest Clean Boilerplate
+      responses:
+        "200":
+          description: ""
+        "500":
+          description: ""
+      summary: Get Status
+      tags:
+      - Status
+produces:
+- application/json
+schemes:
+- http
+swagger: "2.0"
